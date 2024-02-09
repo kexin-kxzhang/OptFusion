@@ -20,7 +20,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 parser = argparse.ArgumentParser()
 # args for model.
 parser.add_argument('--dataset', type=str, default='avazu_2', help='dataset name: criteo/avazu')
-parser.add_argument('--model', type=str, default='optfusion_search', help='model: optfusion_search/optfusion_train')
+parser.add_argument('--model', type=str, default='autofusion_search', help='model: autofusion_search/autofusion_train')
 parser.add_argument('--emb_dim', type=int, default=40, help='embedding dimension')
 parser.add_argument('--emb_std', type=float, default=1e-2, help='dropout for mlp')
 parser.add_argument('--mlp_dims', type=int, nargs='+', default=[960, 960, 960], help='dimension for each layer')
@@ -32,12 +32,12 @@ parser.add_argument('--model_method', type=str, default='parallel', help='DCN_v2
 # args for training.
 parser.add_argument('--optimizer', type=str, default='adam', help='optimizer for training')
 parser.add_argument('--batch_size', type=float, default=4096, help='batch size')
-parser.add_argument('--lr_emb', type=float, default=1e-3, help='learning rate')
-parser.add_argument('--lr_nn', type=float, default=1e-3, help='learning rate')
+parser.add_argument('--lr_emb', type=float, default=3e-3, help='learning rate')
+parser.add_argument('--lr_nn', type=float, default=3e-3, help='learning rate')
 parser.add_argument('--arch_lr', type=float, default=1e-1, 
                     help='learning rate for arch encoding') # new add arch lr
-parser.add_argument('--l2_emb', type=float, default=1e-9, help='weight decay for embedding table')
-parser.add_argument('--l2_nn', type=float, default=1e-9, help='weight decay for embedding table')
+parser.add_argument('--l2_emb', type=float, default=3e-6, help='weight decay for embedding table')
+parser.add_argument('--l2_nn', type=float, default=3e-6, help='weight decay for embedding table')
 parser.add_argument('--init_constant', type=float, default=0.5, help='init connection params')
 parser.add_argument('--epochs', type=int, default=5, help='max epoch for training')
 parser.add_argument('--save_step', action='store_true', default=False, help='save step checkpoint')
@@ -47,7 +47,7 @@ parser.add_argument('--tau', type=float, default=1.0, help='edcn for regulation'
 parser.add_argument('--fusion_mode', type=int, default=1,
                     help='whether 4 fusion types or only add, 1 indicates 4 fusion types, others indicate only add')
 # args for log.
-parser.add_argument('--log_path', type=str, default='/root/autodl-tmp/log/', help='log file save path.')
+parser.add_argument('--log_path', type=str, default='./log/', help='log file save path.')
 
 # device information
 parser.add_argument("--cuda", type=int, choices=range(-1, 8), default=0, help="device info")
