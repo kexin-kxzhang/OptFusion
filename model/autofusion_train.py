@@ -212,6 +212,41 @@ class AutoFusion_train(torch.nn.Module):
 
     def compute_fusion_result(self, fusion_params_init, inputs, block_index):
         if self.fusion_mode == 1:
+            fusion_params = F.softmax(fusion_params_init, dim=1).to(self.device)
+            result_add = torch.sum(torch.stack(inputs), dim=0)
+            result_prod = torch.prod(torch.stack(inputs), dim=0)
+            if block_index == 0:
+                result_concat = self.concat_pooling_c0(*inputs)
+                result_atten = self.attention_pooling_c0(*inputs)
+            if block_index == 1:
+                result_concat = self.concat_pooling_d0(*inputs)
+                result_atten = self.attention_pooling_d0(*inputs)
+            if block_index == 2:
+                result_concat = self.concat_pooling_c1(*inputs)
+                result_atten = self.attention_pooling_c1(*inputs)
+            if block_index == 3:
+                result_concat = self.concat_pooling_d1(*inputs)
+                result_atten = self.attention_pooling_d1(*inputs)
+            if block_index == 4:
+                result_concat = self.concat_pooling_c2(*inputs)
+                result_atten = self.attention_pooling_c2(*inputs)
+            if block_index == 5:
+                result_concat = self.concat_pooling_d2(*inputs)
+                result_atten = self.attention_pooling_d2(*inputs)
+            if block_index == 6:
+                result_concat = self.concat_pooling_last(*inputs)
+                result_atten = self.attention_pooling_last(*inputs)
+
+            result = (
+                fusion_params[:, 0].unsqueeze(1).mul(result_add) +
+                fusion_params[:, 1].unsqueeze(1).mul(result_prod) +
+                fusion_params[:, 2].unsqueeze(1).mul(result_concat) +
+                fusion_params[:, 3].unsqueeze(1).mul(result_atten)
+            )
+
+            return result
+            
+        elif self.fusion_mode == 2:
             fusion_params = F.softmax(fusion_params_init, dim=1)
             fusion_index = torch.argmax(fusion_params).item() 
             fusion_type = self.fusion_types[fusion_index]
