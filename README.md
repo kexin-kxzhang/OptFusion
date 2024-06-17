@@ -6,8 +6,8 @@
 - For KDD12 dataset, run <pre style="background: #f0f0f0; display: inline-block;">python preprocess/kdd2TF.py --store_stat --threshold 2</pre>
 
 ### Search
-run <pre style="background: #f0f0f0; display: inline-block;">bash search.sh</pre>
-e.g.,
+Run <pre style="background: #f0f0f0; display: inline-block;">bash search.sh</pre>
+Here, take Criteo dataset as an example:
 
 <pre style="background: #f0f0f0; padding: 10px;">
 python search_stage.py \
@@ -19,8 +19,8 @@ python search_stage.py \
 </pre>
 
 ### Re-train
-run <pre style="background: #f0f0f0; display: inline-block;">bash retrain.sh</pre>
-e.g.,
+Run <pre style="background: #f0f0f0; display: inline-block;">bash retrain.sh</pre>
+Here, take Criteo dataset as an example:
 
 <pre style="background: #f0f0f0; padding: 10px;">
 python retrain_stage.py \
@@ -30,4 +30,4 @@ python retrain_stage.py \
   --fusion_mode 1 \
   --load 'XXX'
 </pre>
-Here <pre style="background: #f0f0f0; display: inline-block;">XXX</pre> indicates the logs dictionary generated during the search stage.
+Here 'XXX' indicates the logs dictionary generated during the search stage.
