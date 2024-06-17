@@ -47,7 +47,7 @@ parser.add_argument('--val_per_epoch', type=int, default=5, help='')
 parser.add_argument('--early_stop', type=int, default=1, help='how many epochs to stop')
 parser.add_argument('--tau', type=float, default=1.0, help='edcn for regulation')
 parser.add_argument('--fusion_mode', type=int, default=1,
-                    help='whether 4 fusion types or only add, 1 indicates 4 fusion types, others indicate only add')
+                    help='1 indicates 4 soft fusion, 2 indicates 4 hard fusion, others indicate only add')
 
 # args for log.
 parser.add_argument('--log_path', type=str, default='./log/', help='log file save path.')
