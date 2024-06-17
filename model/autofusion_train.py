@@ -108,7 +108,6 @@ class AutoFusion_train(torch.nn.Module):
         self.embed_output_dim = self.field_num * self.emb_dim
         self.embedding = Embedding(data_config['feature_num'], model_config['emb_dim'], model_config['emb_std'])
 
-        self.stacked_mode = model_config['stacked_mode']
         self.fusion_mode = model_config['fusion_mode']
         self.device = torch.device('cuda:'+str(0))
         self.num_layers = len(self.mlp_dims) # num_blocks
