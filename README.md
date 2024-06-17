@@ -1,28 +1,33 @@
 # AutoFusion
 
 ### Preprocess Dataset
-- For Criteo dataset, run 'python preprocess/criteo2TF.py --store_stat --threshold 2'
-- For Avazu dataset, run 'python preprocess/avazu2TF.py --store_stat --threshold 2'
-- For KDD12 dataset, run 'python preprocess/kdd2TF.py --store_stat --threshold 2'
+- For Criteo dataset, run <pre style="background: #f0f0f0; display: inline-block;">python preprocess/criteo2TF.py --store_stat --threshold 2</pre>
+- For Avazu dataset, run <pre style="background: #f0f0f0; display: inline-block;">python preprocess/avazu2TF.py --store_stat --threshold 2</pre>
+- For KDD12 dataset, run <pre style="background: #f0f0f0; display: inline-block;">python preprocess/kdd2TF.py --store_stat --threshold 2</pre>
 
 ### Search
-run 'bash search.sh'
-e.g., 
+run <pre style="background: #f0f0f0; display: inline-block;">bash search.sh</pre>
+e.g.,
+
+<pre style="background: #f0f0f0; padding: 10px;">
 python search_stage.py \
   --dataset criteo_2 --model optfusion_search \
   --emb_dim 40 --mlp_dims 1560 1560 1560 \
   --fusion_mode 1 \
   --init_constant 5e-1 \
   --lr_emb 3e-4 --lr_nn 3e-4 --arch_lr 3e-1 --l2_emb 3e-6 --l2_nn 3e-6
+</pre>
 
 ### Re-train
-run 'bash retrain.sh'
+run <pre style="background: #f0f0f0; display: inline-block;">bash retrain.sh</pre>
 e.g.,
+
+<pre style="background: #f0f0f0; padding: 10px;">
 python retrain_stage.py \
   --dataset criteo_2 --model autofusion_train \
   --emb_dim 40 --mlp_dims 1560 1560 1560 \
   --lr_emb 3e-4 --lr_nn 3e-4 --l2_emb 3e-6 --l2_nn 3e-6 \
   --fusion_mode 1 \
   --load 'XXX'
-
-Here 'XXX' indicates the logs dictionary generated during the search stage.
+</pre>
+Here <pre style="background: #f0f0f0; display: inline-block;">XXX</pre> indicates the logs dictionary generated during the search stage.
