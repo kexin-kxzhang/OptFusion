@@ -17,4 +17,4 @@ python retrain_stage.py \
   --emb_dim 40 --mlp_dims 176 176 176 \
   --lr_emb 3e-8 --lr_nn 3e-8 --l2_emb 0 --l2_nn 0 \
   --fusion_mode 1 \
-  --load 'criteo_searched_model_arch'
+  --load 'kdd_searched_model_arch'
