@@ -124,7 +124,6 @@ class AutoFusion_search(torch.nn.Module):
         self.embedding = Embedding(data_config['feature_num'], model_config['emb_dim'], model_config['emb_std'])
 
         self.device = torch.device('cuda:'+str(0))
-        self.stacked_mode = model_config['stacked_mode']
         self.fusion_mode = model_config['fusion_mode']
         self.init_constant = model_config['init_constant']
 
