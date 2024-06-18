@@ -1,9 +1,9 @@
 # AutoFusion
 
 ### Preprocess Dataset
-- For Criteo dataset, run <pre style="background: #f0f0f0; display: inline-block;">python preprocess/criteo2TF.py --store_stat --threshold 2</pre>
-- For Avazu dataset, run <pre style="background: #f0f0f0; display: inline-block;">python preprocess/avazu2TF.py --store_stat --threshold 2</pre>
-- For KDD12 dataset, run <pre style="background: #f0f0f0; display: inline-block;">python preprocess/kdd2TF.py --store_stat --threshold 2</pre>
+- For Criteo dataset, run <pre style="background: #f0f0f0; display: inline-block;">python dataprocess/criteo2TF.py --store_stat --threshold 2</pre>
+- For Avazu dataset, run <pre style="background: #f0f0f0; display: inline-block;">python dataprocess/avazu2TF.py --store_stat --threshold 2</pre>
+- For KDD12 dataset, run <pre style="background: #f0f0f0; display: inline-block;">python dataprocess/kdd2TF.py --store_stat --threshold 2</pre>
 
 ### Search
 Run <pre style="background: #f0f0f0; display: inline-block;">bash search.sh</pre>
