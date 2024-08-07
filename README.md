@@ -1,4 +1,4 @@
-# AutoFusion
+# Optusion
 
 ### Preprocess Dataset
 - For Criteo dataset, run <pre style="background: #f0f0f0; display: inline-block;">python dataprocess/criteo2TF.py --store_stat --threshold 2</pre>
@@ -24,7 +24,7 @@ Here, take Criteo dataset as an example:
 
 <pre style="background: #f0f0f0; padding: 10px;">
 python retrain_stage.py \
-  --dataset criteo_2 --model autofusion_train \
+  --dataset criteo_2 --model optfusion_train \
   --emb_dim 40 --mlp_dims 1560 1560 1560 \
   --lr_emb 3e-4 --lr_nn 3e-4 --l2_emb 3e-6 --l2_nn 3e-6 \
   --fusion_mode 1 \
