@@ -1,4 +1,4 @@
-# Optusion
+# OptFusion
 
 ### Preprocess Dataset
 - For Criteo dataset, run <pre style="background: #f0f0f0; display: inline-block;">python dataprocess/criteo2TF.py --store_stat --threshold 2</pre>
