@@ -111,9 +111,9 @@ class CrossNetwork_Layer(torch.nn.Module):
         interaction_out = self.weight(X_i) * X_0 + self.bias + X_i
         return interaction_out
     
-class AutoFusion_search(torch.nn.Module):
+class OptFusion_search(torch.nn.Module):
     def __init__(self, data_config, model_config):
-        super(AutoFusion_search, self).__init__()
+        super(OptFusion_search, self).__init__()
         self.emb_dim = model_config['emb_dim']
         self.feature_num = data_config['feature_num']
         self.field_num = data_config['field_num']
