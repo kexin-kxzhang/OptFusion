@@ -20,7 +20,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 parser = argparse.ArgumentParser()
 # args for model.
 parser.add_argument('--dataset', type=str, default='avazu_2', help='dataset name: criteo/avazu')
-parser.add_argument('--model', type=str, default='autofusion_search', help='model: autofusion_search/autofusion_train')
+parser.add_argument('--model', type=str, default='optfusion_search', help='model: optfusion_search/optfusion_train')
 parser.add_argument('--emb_dim', type=int, default=40, help='embedding dimension')
 parser.add_argument('--emb_std', type=float, default=1e-2, help='dropout for mlp')
 parser.add_argument('--mlp_dims', type=int, nargs='+', default=[960, 960, 960], help='dimension for each layer')
