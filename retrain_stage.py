@@ -20,7 +20,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 parser = argparse.ArgumentParser()
 # args for model.
 parser.add_argument('--dataset', type=str, default='avazu_2', help='dataset name: criteo/avazu')
-parser.add_argument('--model', type=str, default='autofusion_train', help='model: autofusion_train')
+parser.add_argument('--model', type=str, default='optfusion_train', help='model: optfusion_train')
 parser.add_argument('--emb_dim', type=int, default=40, help='embedding dimension')
 parser.add_argument('--emb_std', type=float, default=1e-2, help='dropout for mlp')
 parser.add_argument('--mlp_dims', type=int, nargs='+', default=[960, 960, 960], help='dimension for each layer')
@@ -41,7 +41,7 @@ parser.add_argument('--l2_nn', type=float, default=3e-6, help='weight decay for 
 parser.add_argument('--epochs', type=int, default=5, help='max epoch for training')
 parser.add_argument('--initialize_mode', type=int, default=1,
                     help='whether soft selection, 1 indicates yes, others indicate no')
-parser.add_argument('--load', type=str, default='avazu_2_autofusion_search_7935', help='load model arch')
+parser.add_argument('--load', type=str, default='avazu_2_optfusion_search_7935', help='load model arch')
 parser.add_argument('--save_step', action='store_true', default=False, help='save step checkpoint')
 parser.add_argument('--val_per_epoch', type=int, default=5, help='')
 parser.add_argument('--early_stop', type=int, default=1, help='how many epochs to stop')
