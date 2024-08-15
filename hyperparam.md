@@ -11,5 +11,5 @@
 | EDCN             | lr=3e-4, l2=3e-6 | lr=3e-3, l2=1e-9 | lr=1e-3, l2=0    |
 | AutoCTR          | lr=2e-3, l2=0    | lr=2e-3, l2=0    | lr=3e-4, l2=0    |
 | NASRec           | lr=7e-4, l2=0    | lr=2e-3, l2=0    | lr=1e-3, l2=0    |
-| AutoFusion-Hard  | lr=3e-4, l2=3e-6 | lr=1.00E-03, l2=0 | lr=2e-3, l2=0    |
-| AutoFusion-Soft  | lr=3e-4, l2=3e-6 | lr=1.00E-07, l2=0 | lr=3e-8, l2=0    |
+| OptFusion-Hard  | lr=3e-4, l2=3e-6 | lr=1.00E-03, l2=0 | lr=2e-3, l2=0    |
+| OptFusion-Soft  | lr=3e-4, l2=3e-6 | lr=1.00E-07, l2=0 | lr=3e-8, l2=0    |
