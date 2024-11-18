@@ -1,5 +1,10 @@
 # OptFusion
 
+This repository contains the official implementation of our WSDM 2025 paper:  
+**Fusion Matters: Learning Fusion in Deep Click-through Rate Prediction Models**.
+
+---
+
 ### Preprocess Dataset
 - For Criteo dataset, run <pre style="background: #f0f0f0; display: inline-block;">python dataprocess/criteo2TF.py --store_stat --threshold 2</pre>
 - For Avazu dataset, run <pre style="background: #f0f0f0; display: inline-block;">python dataprocess/avazu2TF.py --store_stat --threshold 2</pre>
