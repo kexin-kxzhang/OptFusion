@@ -1,7 +1,10 @@
 # Fusion Matters: Learning Fusion in Deep Click-through Rate Prediction Models (WSDM 2025)
 
-OptFusion
-This repository contains the official implementation of our WSDM 2025 paper
+**OptFusion**  
+
+This repository contains the official implementation of our WSDM 2025 paper:  
+**Fusion Matters: Learning Fusion in Deep Click-through Rate Prediction Models**.
+
 ---
 
 ### Preprocess Dataset
