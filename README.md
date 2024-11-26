@@ -1,8 +1,18 @@
 # Fusion Matters: Learning Fusion in Deep Click-through Rate Prediction Models (WSDM 2025)
 
 This repository contains the official implementation of our WSDM 2025 paper:  
-**Fusion Matters: Learning Fusion in Deep Click-through Rate Prediction Models**.
+📘: [Fusion Matters: Learning Fusion in Deep Click-through Rate Prediction Models](https://arxiv.org/abs/2411.15731).
 
+
+If you find this repository helpful to your work, please kindly star it and cite our paper as follows:
+```bibtex
+@article{zhang2024optfusion,
+      title={Fusion Matters: Learning Fusion in Deep Click-through Rate Prediction Models}, 
+      author={Kexin Zhang and Fuyuan Lyu and Xing Tang and Dugang Liu and Chen Ma and Kaize Ding and Xiuqiang He and Xue Liu},
+      journal={arXiv preprint arXiv:2411.15731},
+      year={2024}
+}
+```
 ---
 
 ### Preprocess Dataset
